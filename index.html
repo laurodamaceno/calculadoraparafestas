@@ -1,0 +1,336 @@
+<!doctype html>
+<html lang="pt-br">
+<head>
+<!-- Bar color of the Chrome in the Android S.O. >=5.0 -->
+<meta name="theme-color" content="#440e0e">
+<!-- 
+    Including meta tags to prevent this from appearing in Google searches because this is just a test 
+-->
+
+<!-- <link rel="shortcut icon" href="assets/images/icon.png" /> -->
+
+<!-- Required meta tags -->
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="description" content="Calcule a quantidade de comidinhas, bebidas, doces e brindes de acordo com o número de convidados. Não deixe faltar nada na sua festa!">
+<meta name="keywords" content="Calculadora de Festas, Doces, Bolos, Doce, Bolo, Confeitaria, Festa">
+<meta name="author" content="Lauro Damaceno">
+
+<!-- Bootstrap CSS -->
+<link rel="stylesheet" href="assets/libs/bootstrap/4.3.1/vendor/twbs/bootstrap/dist/css/bootstrap.min.css">
+
+<!-- Including FontAwesome -->
+<link rel="stylesheet" href="assets/libs/fonts/fontawesome/css/brands.min.css">
+
+<!-- Including rangejs -->
+<link rel="stylesheet" type="text/css" href="assets/libs/rangeslider.js/2.3.2/dist/rangeslider.min.css"> 
+
+<!-- Including AOS Animation -->
+<link href="assets/libs/aos/aos.css" rel="stylesheet">
+
+<!-- My CSS -->
+<link rel="stylesheet" href="assets/css/mystylesheet.min.css">
+
+<title>Calculadora de Festas</title>
+</head>
+<body>
+
+	<header id="main-header">
+
+		<div class="container">
+
+			<div class="row">
+
+				<div class="col-xs-3 col-md-3 col-12 item-top-mobile">
+					<img src="assets/images/logo.svg" title="Calculadora de Festas" alt="Calculadora de " class="img-responsive" data-aos="fade-down" data-aos-once="true"/>
+
+					<span data-aos="fade-right" data-aos-offset="300" data-aos-easing="ease-in-sine" data-aos-once="true">
+					<h1>Calculadora<br/>de festas</h1>
+
+					<p>Calcule a quantidade de comidinhas, bebidas, doces e brindes de acordo com o número de convidados. Não deixe faltar nada na sua festa!</p>
+					</span>
+				</div>
+
+				<div class="col-xs-9 col-md-9 img-top-mobile" data-aos="fade-down" data-aos-easing="linear" data-aos-duration="1500">
+					<img src="assets/images/mask-top-image-1.svg" title="" alt="" class="img-top" />
+				</div>
+
+			</div>
+
+			<!--div class="row ranges" data-aos="zoom-in"-->
+			<div class="row ranges">
+
+				<div class="col-xs-6 col-md-6 col-12">
+					<label for="adults"><span class="lenght-adults">100</span> Adulto(s)</label><br />
+					<input type="range" name="adults" id="adults" min="1" max="300" value="100" class="slider" id="rangeAdults">
+					<br />
+					<span class="min-people">1</span>
+					<span class="max-people">300</span>
+				</div>
+
+				<div class="col-xs-6 col-md-6 col-12">
+					<label for="children"><span  class="lenght-children">100</span> Criança(s)</label><br />
+					<input type="range" name="children" id="children" min="1" max="300" value="100" class="slider" id="rangeChildren">
+					<br />
+					<span class="min-people">1</span>
+					<span class="max-people">300</span>
+				</div>
+
+			</div>
+
+		</div>
+
+	</header>
+
+	<section>
+
+		<div class="container" id="main-content">
+
+			<div class="row">
+
+				<header class="col-xs-12 col-md-12 col-12 text-center top-content" data-aos="fade-down" data-aos-easing="linear" data-aos-duration="1500" data-aos-once="true">
+					<h2>Menu</h2>
+					<p>Confira a quantidade de ítens para sua festa:</p>
+				</header>
+
+				<div class="col-xs-4 col-md-4 col-12 list-item saltines" data-aos="fade-right" data-aos-offset="300" data-aos-easing="ease-in-sine" data-aos-once="true">
+
+					<h3>Salgados</h3>
+
+					<div class="item">
+						<div class="units salgadinho-frito" units="0">0</div>
+						<div class="name-item">Salgadinhos Fritos</div>
+					</div>
+
+					<div class="item">
+						<div class="units salgadinho-assado" units="0">0</div>
+						<div class="name-item">Salgadinhos Assados</div>
+					</div>
+
+				</div>
+
+				<div class="col-xs-4 col-md-4 col-12 list-item sweets" data-aos="fade-right" data-aos-offset="300" data-aos-easing="ease-in-sine" data-aos-once="true">
+
+					<h3>Doces</h3>
+
+					<div class="item">
+						<div class="units brigadeiro" units="0">0</div>
+						<div class="name-item">
+							Brigadeiros
+						</div>
+					</div>
+
+					<div class="item">
+						<div class="units beijinho" units="0">0</div>
+						<div class="name-item">
+							Beijinhos
+						</div>
+					</div>
+
+				</div>
+
+				<div class="col-xs-4 col-md-4 col-12 list-item drinks"  data-aos="fade-right" data-aos-offset="300" data-aos-easing="ease-in-sine" data-aos-once="true">
+
+					<h3>Bebidas</h3>
+
+					<div class="item">
+						<div class="units refri" units="0">0</div>
+						<div class="name-item">
+							Refrigerante
+						</div>
+					</div>
+
+				</div>
+
+			</div>
+
+			<div class="row">
+
+				<div class="col-xs-12 col-md-12 col-12 text-center" data-aos="fade-right" data-aos-offset="300" data-aos-easing="ease-in-sine" data-aos-once="true">
+
+					<button class="btn-default btn" onclick="checkPersonalData()">Solicitar orçamento</button>
+
+				</div>
+
+			</div>
+
+		</div>
+
+	</section>
+
+	<footer>
+
+		<div class="container" data-aos="fade-zoom-in" data-aos-easing="ease-in-back" data-aos-delay="300" data-aos-offset="0" data-aos-once="true">
+
+			<div class="row">
+
+				<div class="col-xs-4 col-md-4 col-12 text-center socials">
+
+					<img src="assets/images/logo-cinza.svg" title="Calculadora de Festas" alt="Calculadora de Festas" class="img-responsive"><br />
+
+					<a href="https://www.facebook.com/#" target="_blank"><i class="fab fa-facebook"></i></a>
+					<a href="https://instagram.com/#" target="_blank"><i class="fab fa-instagram"></i></a>
+
+				</div>
+
+				<div class="col-xs-8 col-md-8 col-12">
+
+					<h1>Calcule agora as  <big>comidinhas para sua Festa</big> de um jeito bem facil!</h1>
+
+					<div class="row">
+
+						<div class="col-xs-4 col-md-4 col-12 address">
+							<h2>Unidade 01 - Cidade</h2>
+
+							<address><p>Logradouro, nº - Bairro</p></address>
+
+							<p><a href="tel:+551188887777" target="_blank">(11) 8888.7777</a></p>
+
+							<span class="how-to-arrive" data-toggle="modal" data-target="#address1">Veja como chegar</span>
+						</div>
+
+						<div class="col-xs-4 col-md-4 col-12 address">
+							<h2>Unidade 02 - Cidade</h2>
+
+							<address><p>Logradouro, nº - Bairro</p></address>
+
+							<p><a href="tel:+551188887777" target="_blank">(11) 8888.7777</a></p>
+
+							<span class="how-to-arrive" data-toggle="modal" data-target="#address2">Veja como chegar</span>
+						</div>
+
+						<div class="col-xs-4 col-md-4 col-12 address">
+							<h2>Unidade 03 - Cidade</h2>
+
+							<address><p>Logradouro, nº - Bairro</p></address>
+
+							<p><a href="tel:+551188887777" target="_blank">(11) 8888.7777</a></p>
+
+							<span class="how-to-arrive" data-toggle="modal" data-target="#address3">Veja como chegar</span>
+						</div>
+
+					</div>
+
+				</div>
+
+			</div>
+
+			<div class="row copyright">
+
+				<div class="col-xs-12 col-md-12 col-12 text-center">
+
+					<a href="https://laurodamaceno.com/" target="_blank"><img src="assets/images/logo-lauro-damaceno.svg" title="Este projeto foi desenvolvido por Lauro Damaceno!"/></a>
+					
+				</div>
+
+			</div>
+
+		</div>
+
+	</footer>
+
+	<!-- Modals -->
+	<div class="modal fade" id="address1" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+		<div class="modal-dialog modal-dialog-centered" role="document">
+			<div class="modal-content">
+				<div class="modal-header">
+					<h5 class="modal-title" id="exampleModalLabel">Unidade 01</h5>
+					<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+						<span aria-hidden="true">&times;</span>
+					</button>
+				</div>
+				<div class="modal-body">
+					<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d7550046.069932329!2d-53.131221382589175!3d-22.483691392336485!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94ce597d462f58ad%3A0x1e5241e2e17b7c17!2sS%C3%A3o%20Paulo!5e0!3m2!1spt-BR!2sbr!4v1569040469650!5m2!1spt-BR!2sbr" width="100%" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="modal fade" id="address2" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+		<div class="modal-dialog modal-dialog-centered" role="document">
+			<div class="modal-content">
+				<div class="modal-header">
+					<h5 class="modal-title" id="exampleModalLabel">Unidade 02</h5>
+					<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+						<span aria-hidden="true">&times;</span>
+					</button>
+				</div>
+				<div class="modal-body">
+					<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d7550046.069932329!2d-53.131221382589175!3d-22.483691392336485!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94ce597d462f58ad%3A0x1e5241e2e17b7c17!2sS%C3%A3o%20Paulo!5e0!3m2!1spt-BR!2sbr!4v1569040469650!5m2!1spt-BR!2sbr" width="100%" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="modal fade" id="address3" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+		<div class="modal-dialog modal-dialog-centered" role="document">
+			<div class="modal-content">
+				<div class="modal-header">
+					<h5 class="modal-title" id="exampleModalLabel">Unidade 03</h5>
+					<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+						<span aria-hidden="true">&times;</span>
+					</button>
+				</div>
+				<div class="modal-body">
+					<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d7550046.069932329!2d-53.131221382589175!3d-22.483691392336485!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94ce597d462f58ad%3A0x1e5241e2e17b7c17!2sS%C3%A3o%20Paulo!5e0!3m2!1spt-BR!2sbr!4v1569040469650!5m2!1spt-BR!2sbr" width="100%" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="modal fade" id="personalData" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+		<div class="modal-dialog modal-dialog-centered" role="document">
+			<div class="modal-content">
+				<div class="modal-header">
+					<h5 class="modal-title" id="exampleModalLabel">Preencha suas informações</h5>
+					<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+						<span aria-hidden="true">&times;</span>
+					</button>
+				</div>
+				<form name="formulario-orcamento" id="formulario-orcamento" method="post">
+					<div class="modal-body">
+						
+						<div class="row">
+							<div class="col-12"><input type="text" class="form-control name" name="name" id="name" placeholder="Digite seu nome aqui..." required="required"></div>
+						</div>
+						<div class="row">
+							<div class="col-12"><input type="email" class="form-control email" name="email" id="email" placeholder="Digite seu e-mail aqui..." required="required"></div>
+						</div>
+						<div class="row">
+							<div class="col-12"><input type="tel" class="form-control phone" name="phone" id="phone" placeholder="Digite seu telefone ou celular aqui..." required="required"></div>
+						</div>
+
+						<input type="hidden" name="salgadinho-frito" class="salgadinho-frito" id="salgadinho-frito" value="">
+						<input type="hidden" name="salgadinho-assado" class="salgadinho-assado" id="salgadinho-assado" value="">
+						<input type="hidden" name="brigadeiro" class="brigadeiro" id="brigadeiro" value="">
+						<input type="hidden" name="beijinho" class="beijinho" id="beijinho" value="">
+						<input type="hidden" name="refri" class="refri" id="refri" value="">
+
+						<button class="btn-default btn col-12">Enviar solicitação</button>
+
+					</div>
+				</form>
+			</div>
+		</div>
+	</div>
+
+	<a href="https://api.whatsapp.com/send?phone=5511988887777&text=Envie%20j%C3%A1%20sua%20mensagem%20para%20a%20EMPRESA!!" target="_blank"><img src="assets/images/whatsapp.svg" alt="Envie já sua mensagem para a Doce Magia via Whatsapp!" class="whatsapp" data-toggle="tooltip" data-placement="top" data-html="true" title="Envie já sua mensagem para a <strong>EMPRESA</strong> via <strong>WhatsApp</strong>!<br>(11) 9 8888-7777"></a>
+
+	<script src="assets/libs/jquery/dist/jquery.min.js"></script>
+	<script src="assets/libs/bootstrap/4.3.1/vendor/twbs/bootstrap/dist/js/bootstrap.min.js"></script>
+	<script src="assets/libs/bootstrap.bundle.min.js"></script>
+	<!-- Including JQuery Masks JS -->
+	<script src="assets/libs/rangeslider.js/2.3.2/dist/rangeslider.min.js"></script>
+	<!-- Including Jquery Adcional Libs JS -->
+	<script src="assets/libs/jquery.plus/jquery.mask.min.js"></script>
+	<script src="assets/libs/jquery.plus/jquery.validate.min.js"></script>
+	<script src="assets/libs/jquery.plus/messages_pt_BR.min.js"></script>
+	<!-- Including SweetAlert JS -->
+	<script src="assets/libs/sweetalert/sweetalert2.all.min.js"></script>
+	<!-- Including AOS Animation JS -->
+	<script src="assets/libs/aos/aos.js"></script>
+	<!-- Including My script JS -->
+	<script src="assets/scripts/myscript.min.js"></script>
+
+</body>
+</html>

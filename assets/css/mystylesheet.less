@@ -1,0 +1,436 @@
+@vinho: #440e0e;
+@vinho-2: #7a201f;
+@dark-vinho: #350b0c;
+@branco: #fff;
+@amarelo: #ffb700;
+@cinza-claro: #fafafa;
+@cinza-medio: #9d9d9d;
+@cinza-escuro: #616161;
+@verde-oliva: #66b132;
+@cinza-2: #dfdfdf;
+@cinza-3: #5d5d5d;
+
+@font-face {
+  font-family: Asap Bold;
+  src: url('../libs/fonts/Asap/Asap-Bold.ttf');
+}
+@font-face {
+  font-family: Asap Bold Italic;
+  src: url('../libs/fonts/Asap/Asap-BoldItalic.ttf');
+}
+@font-face {
+  font-family: Asap Medium;
+  src: url('../libs/fonts/Asap/Asap-Medium.ttf');
+}
+@font-face {
+  font-family: Asap Medium Italic;
+  src: url('../libs/fonts/Asap/Asap-MediumItalic.ttf');
+}
+@font-face {
+  font-family: Asap Regular;
+  src: url('../libs/fonts/Asap/Asap-Regular.ttf');
+}
+@font-face {
+  font-family: Asap Regular Italic;
+  src: url('../libs/fonts/Asap/Asap-RegularItalic.ttf');
+}
+@font-face {
+  font-family: Asap Semi Bold;
+  src: url('../libs/fonts/Asap/Asap-SemiBold.ttf');
+}
+@font-face {
+  font-family: Asap Semi Bold Italic;
+  src: url('../libs/fonts/Asap/Asap-SemiBoldItalic.ttf');
+}
+@font-face {
+  font-family: Great Vibes;
+  src: url('../libs/fonts/Great_Vibes/GreatVibes-Regular.ttf');
+}
+
+html, body {
+  margin: 0px;
+  padding: 0px;
+  background-color: @cinza-claro;
+  font-family: 'Asap Regular', sans-serif;
+}
+
+#main-header {
+	background-color: @vinho;
+	background-image: url(../images/bg-top.svg);
+	//background-repeat: ;
+	color: @branco;
+	padding-bottom: 80px;
+	font-family: 'Asap Regular', sans-serif;
+	font-size: 0.9rem;
+
+	.img-top-mobile {
+		display: block;
+	}
+	@media (max-width: 768px) {
+		.img-top-mobile {
+			display: none;
+		}
+	}
+
+	.img-responsive {
+		width: 87%;
+		height: auto;
+		margin-bottom: 70px;
+		margin-top: 20px;
+	}
+
+	@media (max-width: 768px) {
+		.img-responsive {
+			width: 50%;
+			margin-left: 25%;
+			margin-right: 25%;
+			margin-bottom: 20px;
+		}
+	}
+
+	h1 {
+		color: @amarelo;
+		font-family: 'Great Vibes', cursive;
+		font-size: 4rem;
+	}
+
+	@media (max-width: 768px) {
+		h1 {
+			font-size: 2.8rem;
+		}
+		h1, p {
+			text-align: center;
+		}
+	}
+
+	.img-top {
+		width: 80%;
+		height: auto;
+		float: right;
+	}
+
+	.ranges {
+		padding-top: 50px;
+		color: @amarelo;
+		text-align: left;
+
+		label {
+			background-color: @amarelo;
+			color: @vinho;
+			font-family: 'Asap Bold', sans-serif;
+			padding: 10px 20px 10px 20px;
+			border-radius: 20px;
+			margin-left: 30px;
+			margin-bottom: 50px;
+		}
+
+		@media (max-width: 768px) {
+			label {
+				margin-left: auto;
+				margin-right: auto;
+				margin-bottom: 20px;
+			}
+		}
+
+		.rangeslider__fill {
+			background-color: @amarelo;
+			top: 0;
+			height: 100%;
+		}
+
+		.rangeslider--horizontal {
+		  background-color: @dark-vinho;
+		  height: 15px;
+		}
+
+		.rangeslider__handle {
+			background: rgba(0,0,0,0);
+			border: 1px solid rgba(0,0,0,0);
+			width: 35px;
+		  	height: 35px;
+		}
+
+		.rangeslider__handle::after {
+			background: @branco;
+			width: 27px;
+		  	height: 27px;
+		}
+
+		.slider {
+		  -webkit-appearance: none;
+		  width: 100%;
+		  height: 15px;
+		  background: @dark-vinho;
+		  border-radius: 100px;
+		  outline: none;
+		  opacity: 0.7;
+		  -webkit-transition: .2s;
+		  transition: opacity .2s;
+		}
+
+		.slider:hover {
+		  opacity: 1;
+		}
+
+		.slider::-webkit-slider-thumb {
+		  -webkit-appearance: none;
+		  appearance: none;
+		  width: 27px;
+		  height: 27px;
+		  border-radius: 100px;
+		  background: @branco;
+		  cursor: pointer;
+		}
+
+		.slider::-moz-range-thumb {
+		  width: 27px;
+		  height: 27px;
+		  border-radius: 100px;
+		  background: @branco;
+		  cursor: pointer;
+		}
+
+		.min-people {
+			font-family: 'Asap Bold', sans-serif;
+			float: left;
+		}
+		@media (max-width: 768px) { 
+			.min-people {
+				float: left;
+			}
+		}
+		.max-people {
+			font-family: 'Asap Bold', sans-serif;
+			float: right;
+		}
+	}
+	@media (max-width: 768px) { 
+		.ranges {
+			text-align: center;
+		}
+	}
+}
+
+#main-content {
+	padding-top: 50px;
+	color: @cinza-escuro;
+	padding-bottom: 70px;
+	border-bottom: 1px solid @cinza-2;
+
+	.top-content {
+		margin-bottom: 50px;
+
+		h2 {
+			color: @vinho;
+			font-family: 'Great Vibes', cursive;
+			font-size: 4rem;
+		}
+
+		p {
+			color: @vinho;
+			font-family: 'Asap Regular', sans-serif;
+		}
+
+	}
+
+	h3 {
+		color: @cinza-medio;
+		margin-bottom: 20px;
+		font-family: 'Great Vibes', cursive;
+
+	}
+	@media (max-width: 768px) { 
+		h3 {
+			font-size: 2rem;
+		}
+	}
+
+	.gifts {
+		margin-top: 50px;
+		padding-bottom: 30px;
+		border-bottom: 1px solid @cinza-2;
+	}
+
+	.item {
+
+		.units {
+			font-weight: bolder;
+			color: @vinho;
+			border: 3px solid @amarelo;
+			border-radius: 50px;
+			padding: 0px 20px 0px 20px;
+			margin-right: 15px;
+			width: 90px;
+			float: left;
+			text-align: center;
+			font-size: 14px;
+		}
+		.name-item {
+			float: left;
+		}
+
+	}
+
+	.type_cake, .tamanho-do-bolo-view, .bolo-view {
+		font-weight: bolder;
+		color: @vinho;
+		border: 3px solid @amarelo;
+		border-radius: 50px;
+		text-align: center;
+		font-size: 14px;
+		background-color: @cinza-claro;
+		outline: none;
+		width: 100%;
+		padding: 1.9px 20px 1.9px 20px;
+	}
+
+	.opt {
+		text-align: center !important;
+		color: @vinho !important;
+		background-color: @cinza-claro;
+	}
+
+	button {
+		background-color: @verde-oliva;
+		border: 1px solid @verde-oliva;
+		border-radius: 50px;
+		color: @branco;
+		padding: 10px 70px 10px 70px;
+		font-weight: bolder;
+		font-size: 1.5rem;
+		margin-top: 70px;
+		outline: none;
+	}
+	@media (max-width: 768px) { 
+		button {
+			margin-top: 20px;
+			font-size: 1.1rem;
+		}
+	}
+}
+
+footer {
+	margin-top: 70px;
+	padding-bottom: 70px;
+
+	.socials {
+		font-size: 1.5rem;
+
+		.img-responsive {
+			width: 65%;
+			height: auto;
+			margin-bottom: 25px;
+		}
+
+		a, a:hover {
+			color: @cinza-escuro;
+			text-decoration: none;
+		}
+
+		a {
+			opacity: 1;
+			transition-duration: 0.3s;
+		}
+		a:hover {
+			opacity: 0.7;
+		}
+
+		.fa-instagram {
+			margin-left: 1.8rem;
+		}
+	}
+
+	h1 {
+		color: @cinza-2;
+		font-size: 2rem;
+		margin-bottom: 2rem;
+		font-family: 'Asap Bold', sans-serif;
+		font-weight: bolder;
+	}
+
+	h2 {
+		color: @cinza-3;
+		font-size: 1.2rem;
+		margin-bottom: 1.2rem;
+		font-family: 'Asap Bold', sans-serif;
+	}
+
+	p, a, a:hover {
+		color: @cinza-medio;
+		text-decoration: none;
+	}
+
+	.how-to-arrive {
+		color: @vinho-2;
+		cursor: pointer;
+		font-family: 'Asap Semi Bold', sans-serif;
+		opacity: 1;
+		transition-duration: 0.3s;
+	}
+	.how-to-arrive:hover {
+		opacity: 0.7;
+	}
+
+	.address {
+		margin-bottom: 0px;
+	}
+	@media (max-width: 768px) {
+		.address {
+			margin-bottom: 40px;
+		}
+	}
+
+
+	.copyright {
+		margin-top: 70px;
+	}
+	@media (max-width: 768px) {
+		.copyright {
+			margin-top: 10px;
+		}
+	}
+}
+
+// Large devices (desktops, 992px and up)
+@media (max-width: 992px) {
+	footer {
+		text-align: center;
+	}
+}
+
+.modal-title {
+	color: @vinho;
+}
+
+#formulario-orcamento {
+	.row {
+		margin-bottom: 5px;
+
+		input {
+			text-align: center;
+		}
+	}
+	button {
+		background-color: @verde-oliva;
+		border: 1px solid @verde-oliva;
+		border-radius: 10px;
+		color: @branco;
+		padding: 10px 70px 10px 70px;
+		font-weight: bolder;
+		outline: none;
+	}
+}
+
+.whatsapp {
+	position: fixed;
+	z-index: 999;
+	left: 10px;
+	bottom: 10px;
+	width: 55px;
+	height: auto;
+}
+
+.bs-tooltip-auto[x-placement^=bottom] .arrow::before,
+.bs-tooltip-bottom .arrow::before {
+	background-color: @dark-vinho;;
+}
